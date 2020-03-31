@@ -1,5 +1,5 @@
 let verseChoose = document.querySelector('select');
-let poem = document.querySelector('p');
+let poemDisplay = document.querySelector('p');
 verseChoose.onchange = function() {
   let verse = verseChoose.value;
   updateDisplay(verse);
@@ -9,12 +9,12 @@ function updateDisplay(verse) {
   verse = verse.toLowerCase();
   let url = verse + '.txt';
 
-  fetch(url).then(function(response){
-    response.text().then(function (text){
-     poem.textContent = text;
-    });
-  });
+  fetch(url).then(function(response) {
+      response.text().then(function(text) {
+         poemDisplay.textContent = text;                  
+      });  
+    }); 
+  }
 
-  updateDisplay('Verse 1');
-  verseChoose.value = 'Verse 1';
-}
+updateDisplay('Verse 1'); 
+verseChoose.value = 'Verse 1'; 
