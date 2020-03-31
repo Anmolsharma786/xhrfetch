@@ -2,7 +2,7 @@
 
 /* Using XMLHTTPRequest API*/
 let verseChoose = document.querySelector('select');
-let poemDisplay = document.querySelector('p');
+let poem = document.querySelector('p');
 
 verseChoose.onchange = function() {
   let verse = verseChoose.value;
@@ -18,7 +18,7 @@ function updateDisplay(verse) {
   request.responseType = 'text';
 
   request.onload = function(){
-    peomDisplay.textContent = request.response;
+    poem.textContent = request.response;
   };
   request.send();
 }
