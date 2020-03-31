@@ -13,7 +13,7 @@ function updateDisplay(verse) {
   verse = verse.toLowerCase();
   let url = verse + '.txt';
 
-  let request = new XMLHTTPRequest();
+  let request = new XMLHttpRequest();
   request.open('GET',url);
   request.responseType = 'text';
 
