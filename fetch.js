@@ -11,7 +11,7 @@ function updateDisplay(verse) {
 
   fetch(url).then(function(response){
     response.text().then(function (text){
-     poem.textContent = request.response;
+     poem.textContent = text;
     });
   });
 
