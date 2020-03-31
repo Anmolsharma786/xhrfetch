@@ -1,5 +1,5 @@
 let verseChoose = document.querySelector('select');
-let poemDisplay = document.querySelector('p');
+let poem = document.querySelector('p');
 verseChoose.onchange = function() {
   let verse = verseChoose.value;
   updateDisplay(verse);
@@ -11,7 +11,7 @@ function updateDisplay(verse) {
 
   fetch(url).then(function(response){
     response.text().then(function (text){
-      peomDisplay.textContent = request.response;
+     poem.textContent = request.response;
     });
   });
 
