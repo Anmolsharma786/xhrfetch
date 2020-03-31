@@ -23,6 +23,10 @@ function updateDisplay(verse) {
   request.send();
 }
 
+
+updateDisplay('Verse 1');
+verseChoose.value = 'Verse 1';
+
 /* This code inspired by -
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 */
